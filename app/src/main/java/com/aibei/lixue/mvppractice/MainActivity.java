@@ -2,7 +2,6 @@ package com.aibei.lixue.mvppractice;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -11,9 +10,10 @@ import com.aibei.lixue.mvppractice.datas.Girl;
 import com.aibei.lixue.mvppractice.presenter.PresenterV01;
 import com.aibei.lixue.mvppractice.view.IGirlView;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements IGirlView {
+public class MainActivity extends BaseActivity implements IGirlView {
 
 //    private GridView gridView;
     private ListView listView;
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements IGirlView {
         setContentView(R.layout.activity_main);
         initView();
         mContext = getBaseContext();
+        mViewRef = new WeakReference<>(this);
         new PresenterV01(this).attach();
 //        new PresenterV02(this).attach();
     }
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements IGirlView {
 
     @Override
     public void showGirl(List<Girl> girls) {
+
 //        gridView.setAdapter(new GirlAdapter(girls,mContext));
         listView.setAdapter(new GirlAdapter(girls,mContext));
     }
