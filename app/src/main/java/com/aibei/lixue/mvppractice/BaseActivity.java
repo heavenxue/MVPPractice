@@ -1,6 +1,7 @@
 package com.aibei.lixue.mvppractice;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.aibei.lixue.mvppractice.view.IGirlView;
 
@@ -16,6 +17,7 @@ import java.lang.ref.WeakReference;
  * Created by Administrator on 2016/8/19.
  */
 public abstract class BaseActivity<T extends IGirlView> extends Activity{
+    private static final String TAG = "BaseActivity";
     protected WeakReference<T> mViewRef; // view 的弱引用
 
     /**
@@ -33,6 +35,7 @@ public abstract class BaseActivity<T extends IGirlView> extends Activity{
         if (mViewRef != null) {
             mViewRef.clear();
             mViewRef = null;
+            Log.i(TAG,"已经GC---");
         }
     }
 }
