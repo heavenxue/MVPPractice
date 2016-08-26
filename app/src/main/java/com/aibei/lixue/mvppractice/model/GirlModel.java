@@ -19,14 +19,14 @@ public class GirlModel implements IGirlModel {
                     Thread.sleep(2500);//模拟从网络获取数据
                     //获取数据
                     List<Girl> girls = new ArrayList<>();
-                    Girl girl0 = new Girl(R.drawable.girl0,"美女一枚多多关注");
-                    Girl girl1 = new Girl(R.drawable.girl1,"心如心如最美丽");
-                    Girl girl2 = new Girl(R.drawable.girl2,"白富美");
-                    Girl girl3 = new Girl(R.drawable.girl3,"天天好心情");
-                    Girl girl4 = new Girl(R.drawable.girl4,"眉笑眼开");
-                    Girl girl5 = new Girl(R.drawable.girl5,"天天魅力无限");
-                    Girl girl6 = new Girl(R.drawable.girl6,"美好的心情开始了");
-                    Girl girl7 = new Girl(R.drawable.girl8,"天空飘过一朵云");
+                    Girl girl0 = new Girl(R.mipmap.girl0,"美女一枚多多关注");
+                    Girl girl1 = new Girl(R.mipmap.girl1,"心如心如最美丽");
+                    Girl girl2 = new Girl(R.mipmap.girl2,"白富美");
+                    Girl girl3 = new Girl(R.mipmap.girl3,"天天好心情");
+                    Girl girl4 = new Girl(R.mipmap.girl4,"眉笑眼开");
+                    Girl girl5 = new Girl(R.mipmap.girl5,"天天魅力无限");
+                    Girl girl6 = new Girl(R.mipmap.girl6,"美好的心情开始了");
+                    Girl girl7 = new Girl(R.mipmap.girl8,"天空飘过一朵云");
                     girls.add(girl0);
                     girls.add(girl1);
                     girls.add(girl2);

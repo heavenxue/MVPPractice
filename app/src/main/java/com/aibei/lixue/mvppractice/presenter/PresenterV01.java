@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/8/19.
  */
-public class PresenterV01 {
+public class PresenterV01 extends BasePresenter<IGirlView> {
     private IGirlView iGrilView;
     private IGirlModel iGirlModel = new GirlModel();
 

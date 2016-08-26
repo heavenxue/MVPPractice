@@ -10,10 +10,9 @@ import com.aibei.lixue.mvppractice.datas.Girl;
 import com.aibei.lixue.mvppractice.presenter.PresenterV01;
 import com.aibei.lixue.mvppractice.view.IGirlView;
 
-import java.lang.ref.WeakReference;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements IGirlView {
+public class MainActivity extends MVPBaseActivity<IGirlView,PresenterV01> implements IGirlView {
 
 //    private GridView gridView;
     private ListView listView;
@@ -25,10 +24,16 @@ public class MainActivity extends BaseActivity implements IGirlView {
         setContentView(R.layout.activity_main);
         initView();
         mContext = getBaseContext();
-        mViewRef = new WeakReference<>(this);
-        new PresenterV01(this).attach();
+        mPresenter.attach();
 //        new PresenterV02(this).attach();
     }
+
+    @Override
+    protected PresenterV01 createPresenter() {
+//        mPresenter.attachView(this);
+        return new PresenterV01(this);
+    }
+
 
     private void initView(){
 //        gridView = (GridView) findViewById(R.id.grid);
