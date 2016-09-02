@@ -31,7 +31,7 @@ public class MainActivity extends MVPBaseActivity<IGirlView,PresenterV01> implem
     @Override
     protected PresenterV01 createPresenter() {
 //        mPresenter.attachView(this);
-        return new PresenterV01(this);
+        return new PresenterV01();
     }
 
 
