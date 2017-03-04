@@ -14,7 +14,6 @@ import java.util.List;
 
 public class MainActivity extends MVPBaseActivity<IGirlView,PresenterV01> implements IGirlView {
 
-//    private GridView gridView;
     private ListView listView;
     private Context mContext;
 
@@ -24,7 +23,7 @@ public class MainActivity extends MVPBaseActivity<IGirlView,PresenterV01> implem
         setContentView(R.layout.activity_main);
         initView();
         mContext = getBaseContext();
-        mPresenter.attach();
+        mPresenter.attach(this);
 //        new PresenterV02(this).attach();
     }
 
